@@ -6,7 +6,7 @@ const foodTypeBubble = {
     contents: [
       {
         type: "image",
-        url: url,
+        url: "URL",
         size: "full",
         aspectMode: "cover",
         aspectRatio: "2:3",
