@@ -85,7 +85,7 @@ const foodBubble = {
   type: "bubble",
   hero: {
     type: "image",
-    url: url,
+    url: "URL",
     size: "full",
     aspectRatio: "20:13",
     aspectMode: "cover",
@@ -266,7 +266,7 @@ const reciept = {
               },
               {
                 type: "text",
-                text: price,
+                text: "PRICE",
                 size: "sm",
                 color: "#111111",
                 align: "end",
