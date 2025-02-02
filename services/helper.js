@@ -308,3 +308,22 @@ const reciept = {
     },
   },
 };
+
+export function getDatePickerConfig() {
+  // Helper function to format date as "YYYY-MM-DDt00:00"
+  const formatDate = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}t00:00`;
+  };
+
+  // Get current date and add one day for tomorrow (minDate)
+  const now = new Date();
+  const minDate = formatDate(new Date(now.getTime() + 24 * 60 * 60 * 1000)); // Midnight of tomorrow
+
+  // Get the date 2 days after today for maxDate
+  const maxDate = formatDate(new Date(now.getTime() + 48 * 60 * 60 * 1000)); // 2 days after today
+
+  return { minDate, maxDate };
+}
