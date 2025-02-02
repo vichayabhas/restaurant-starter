@@ -1,4 +1,4 @@
-const foodTypeBubble = {
+export const foodTypeBubble = {
   type: "bubble",
   body: {
     type: "box",
@@ -80,8 +80,7 @@ const foodTypeBubble = {
     paddingAll: "0px",
   },
 };
-
-const foodBubble = {
+export const foodBubble = {
   type: "bubble",
   hero: {
     type: "image",
@@ -141,8 +140,7 @@ const foodBubble = {
     ],
   },
 };
-
-const reciept = {
+export const reciept = {
   type: "bubble",
   body: {
     type: "box",
@@ -311,7 +309,7 @@ const reciept = {
 
 export function getDatePickerConfig() {
   // Helper function to format date as "YYYY-MM-DDt00:00"
-  const formatDate = (date) => {
+  const formatDate = (date: Date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
