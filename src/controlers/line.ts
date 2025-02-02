@@ -44,3 +44,6 @@ function sendArigato(event) {
     messages: [message,message,message,message,message],
   });
 }
+export function test (req: express.Request, res: express.Response){
+  res.status(200).json({success:true})
+}
